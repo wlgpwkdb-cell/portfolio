@@ -43,26 +43,26 @@ const WorkSection: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-8 md:px-16">
         <div className="mb-24 flex flex-col items-start">
           <span className="text-blue-600 font-black tracking-widest text-xs mb-4 uppercase">Selected Portfolios</span>
-          <h3 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter text-zinc-900 uppercase leading-none">WORK</h3>
-          <div className="h-1.5 w-24 bg-blue-600"></div>
+          <h3 className="text-5xl md:text-8xl font-black mb-6 tracking-tighter text-zinc-900 uppercase leading-none">WORK</h3>
+          <div className="h-2 w-32 bg-blue-600"></div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
           {WORK_CATEGORIES.map((category) => (
             <div key={category.id} className="group flex flex-col">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-2xl mb-10 bg-zinc-200">
+              <div className="relative aspect-video overflow-hidden rounded-2xl mb-10 bg-zinc-200 shadow-sm">
                 <img 
                   src={category.imageUrl} 
                   alt={category.title}
-                  className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  className="w-full h-full object-cover object-center grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
 
               <div className="px-2">
                 <div className="mb-8 border-l-4 border-blue-600 pl-6">
                   <span className="text-blue-600 font-bold text-sm tracking-widest uppercase block mb-2">{category.title}</span>
-                  <h4 className="text-3xl md:text-4xl font-black tracking-tighter text-zinc-900 leading-tight uppercase">
+                  <h4 className="text-3xl md:text-4xl font-black tracking-tighter text-zinc-900 leading-tight uppercase break-keep">
                     {category.subtitle}
                   </h4>
                 </div>
@@ -79,7 +79,7 @@ const WorkSection: React.FC = () => {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                         </svg>
                       </button>
-                      <p className="text-zinc-500 text-sm md:text-base leading-relaxed font-normal max-w-md">
+                      <p className="text-zinc-500 text-sm md:text-base leading-relaxed font-normal max-w-md break-keep">
                         {item.description}
                       </p>
                     </div>
@@ -126,11 +126,11 @@ const WorkSection: React.FC = () => {
                 {/* Left: Main Story */}
                 <div className={`${selectedProject.contribution || (selectedProject.links && selectedProject.links.length > 0) ? 'lg:col-span-7' : 'max-w-4xl mx-auto'} space-y-16`}>
                   {/* Image Area */}
-                  <div className="rounded-3xl overflow-hidden aspect-[16/9] bg-zinc-100 shadow-inner group relative">
+                  <div className="rounded-3xl overflow-hidden aspect-video bg-zinc-100 shadow-inner group relative">
                     <img 
                       src={selectedProject.modalImageUrl || "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=1200"} 
                       alt={selectedProject.title}
-                      className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-700"
+                      className="w-full h-full object-cover object-center grayscale-[0.1] group-hover:grayscale-0 transition-all duration-700"
                     />
                   </div>
 
@@ -140,7 +140,7 @@ const WorkSection: React.FC = () => {
                         <div className="w-1 h-5 bg-blue-600"></div>
                         <h5 className="text-[11px] font-black uppercase tracking-[0.2em] text-zinc-900">기획 의도</h5>
                       </div>
-                      <p className="text-zinc-600 text-lg md:text-xl leading-relaxed font-normal">
+                      <p className="text-zinc-600 text-lg md:text-xl leading-relaxed font-normal break-keep">
                         {selectedProject.planningIntent}
                       </p>
                     </section>
@@ -150,7 +150,7 @@ const WorkSection: React.FC = () => {
                         <div className="w-1 h-5 bg-zinc-900"></div>
                         <h5 className="text-[11px] font-black uppercase tracking-[0.2em] text-zinc-900">프로그램 설명</h5>
                       </div>
-                      <p className="text-zinc-600 text-lg md:text-xl leading-relaxed font-normal">
+                      <p className="text-zinc-600 text-lg md:text-xl leading-relaxed font-normal break-keep">
                         {selectedProject.fullDescription}
                       </p>
                     </section>

@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-white">
       {/* Background Image - Optimized for the 'work-first' feel */}
-      <div className="absolute inset-0 z-0 opacity-[0.15]">
+      <div className="absolute inset-0 z-0 opacity-[0.12]">
         <img 
           src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2000" 
           alt="Office Brainstorming" 
@@ -26,14 +26,14 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Headline with requested line breaks and tighter spacing */}
-          <h1 className="text-[12vw] md:text-[85px] font-black leading-[1.05] mb-12 kerning-tight tracking-[-0.06em] text-zinc-900">
+          <h1 className="text-[11vw] md:text-[85px] font-black leading-[1.05] mb-12 kerning-tight tracking-[-0.06em] text-zinc-900 break-keep">
             마음을 움직이는<br />
             기획으로<br />
             <span className="text-zinc-400">결과의 차이를 만듭니다.</span>
           </h1>
 
           {/* Sub-tagline with refined weights */}
-          <p className="text-lg md:text-2xl text-zinc-600 leading-relaxed font-normal mb-14 tracking-tight">
+          <p className="text-lg md:text-2xl text-zinc-600 leading-relaxed font-normal mb-14 tracking-tight break-keep">
             10년 차 콘텐츠 해결사 <span className="text-zinc-900 font-bold border-b-[3px] border-blue-600 pb-0.5 inline-block">이지혜</span>입니다.
           </p>
         </div>
