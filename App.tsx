@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import WorkSection from './components/WorkSection';
 import StorySection from './components/StorySection';
-import Footer from './components/Footer';
 
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
         <WorkSection />
         <StorySection />
       </main>
-      <Footer />
     </div>
   );
 }
